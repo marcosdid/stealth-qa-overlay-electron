@@ -58,7 +58,7 @@ async function pipeline() {
     }
     const pngBuffer = source.thumbnail.toPNG();
 
-    const lang = process.env.LANG || 'pt-BR';
+    const lang = process.env.LANG || 'por';
     const ocrText = await runOCR(pngBuffer, lang);
 
     const lines = ocrText.split('\n').map(l => l.trim()).filter(Boolean);
