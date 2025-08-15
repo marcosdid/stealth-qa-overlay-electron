@@ -4,8 +4,13 @@ config();
 
 const apiKey = process.env.OPENAI_API_KEY;
 const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
+const isTesting = process.env.IS_TESTING === 'true';
 
 async function askLLM(question, ocrContext) {
+  if (isTesting) {
+    return question;
+  }
+
   if (!apiKey) {
     throw new Error('OPENAI_API_KEY não configurada');
   }
