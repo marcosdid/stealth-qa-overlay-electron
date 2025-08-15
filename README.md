@@ -21,6 +21,8 @@ cp .env.example .env # preencha OPENAI_API_KEY
 npm run dev
 ```
 
+Por padrão, o OCR usa o idioma `por` (Português). Para outro idioma, defina a variável de ambiente `LANG` com o código Tesseract correspondente (por exemplo, `LANG=eng`).
+
 ## Build
 ```bash
 npm run dist
