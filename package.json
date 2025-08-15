@@ -1,0 +1,28 @@
+{
+  "name": "stealth-qa-overlay-electron",
+  "version": "0.1.0",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "electron .",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-fetch": "^2.7.0",
+    "tesseract.js": "^5.0.5"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.yourcompany.stealthqa",
+    "win": {
+      "target": ["nsis", "msi"]
+    },
+    "asar": true
+  }
+}
